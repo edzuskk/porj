@@ -15,3 +15,4 @@ VALUES
 ("otrais ieraksts");
 
 SELECT * FROM posts;
+
