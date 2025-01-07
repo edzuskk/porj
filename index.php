@@ -7,13 +7,20 @@ $config = require("config.php");
 //dzekin tu esi nepareizaja mape
 
 $db = new Database($config["database"]);
-$posts = $db->query("SELECT * FROM posts")->fetchAll();
 
+$sql = "SELECT * FROM posts";
+$params = [];
 //meklesana
 if(isset($_GET["search_query"]) && $_GET["search_query"] != ""){
-    dd("SELECT * FROM posts WHERE content LIKE ". $_GET["search_query"]);
-    $posts = $db->query("SELECT * FROM posts WHERE content LIKE ". $_GET["search_query"])->fetchAll();
+    $search_query = "%" . $_GET["search_query"] . "%";
+    $sql .= " WHERE content LIKE :search_query";
+    $params = ["search_query" => $search_query];
 }
+
+$posts = $db->query($sql, $params)->fetchAll();
+
+$d = "Liels";
+$d .= "suns";
 
 // dd($posts[0]["content"]);
 // foreach
