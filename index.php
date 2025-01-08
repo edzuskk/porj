@@ -4,7 +4,7 @@ require "Database.php";
 
 $config = require("config.php");
 
-
+// tu nepareizaja mape
 
 $db = new Database($config["database"]);
 
@@ -24,19 +24,8 @@ $d .= "suns";
 
 // dd($posts[0]["content"]);
 // foreach
-echo "<h1>Blogs<h1>";
-echo "<form>";
-echo "<input name='search_query'/>";
-echo "<button>meklet</button>";
-echo "</form>";
 
-if (count($posts) == 0 ) {
-echo "Nav atrasts!!🤔💋" ;
-}
-echo "<ul>";
-foreach($posts as $post){
-echo "<li>" . $post["content"] . "</li>";
-}
-echo "</ul>";
+require "views/index.view.php";
+
 
 
