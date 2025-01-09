@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darbins</title>
-</head>
-<body>
+<?php require "components/navbar.php" ?>
+<?php require "components/header.php" ?>
 <h1>blogs</h1>
 
 <form>
     <input name='search_query' value='<?= $_GET["search_query"] ?? "" ?>'/>
     <button>meklet</button>
 </form>
+
+<?php if (count($posts) == 0 ) { ?>
+ <p>neka nav</p>
+<?php } ?>
 
 <ul>
     <?php foreach($posts as $post){ ?>

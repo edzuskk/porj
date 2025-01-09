@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barons</title>
-</head>
-<body>
+<?php require "components/header.php" ?>
+<?php require "components/navbar.php" ?>
 <!-- TODO: Izvēlies nosaukumu bloga vietnei!-->
 
 <h1>Blogu revolūcija: populārās blogu platformas <em><?= $title ?></em> stāsts</h1>
