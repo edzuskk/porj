@@ -1,8 +1,10 @@
 <?php
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
+$routes = require("routes.php");
+dd($routes);
  if ($uri == "/"){
      require "controllers/index.php";
- }else if ( $uri == "/about"){
+ }else if ( $uri == "/story"){
      require "controllers/story.php";
  }else if($uri == "/categories"){
      require "controllers/categories.php";

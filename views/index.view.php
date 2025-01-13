@@ -1,6 +1,6 @@
 <?php require "components/navbar.php" ?>
 <?php require "components/header.php" ?>
-<h1>blogs</h1>
+<h1>Blogs</h1>
 
 <form>
     <input name='search_query' value='<?= $_GET["search_query"] ?? "" ?>'/>
