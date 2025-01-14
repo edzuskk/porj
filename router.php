@@ -6,5 +6,5 @@ $routes = require("routes.php");
  }else{
     http_response_code(404);
     require "controllers/404.php";
-    die();
+    die(); 
 }

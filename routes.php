@@ -1,5 +1,7 @@
 <?php 
 return[
-    "/"=>"controllers/index.php",
-    "/story"=>"controllers/story.php"
+    "/" => "controllers/posts/index.php",
+    "/show" => "controllers/posts/show.php",
+    "/story" =>"controllers/story.php",
+    "/create" => "controllers/posts/create.php",
 ];

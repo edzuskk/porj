@@ -1,5 +1,5 @@
-<?php require "components/navbar.php" ?>
-<?php require "components/header.php" ?>
+<?php require "views/components/navbar.php" ?>
+<?php require "views/components/header.php" ?>
 <h1>Blogs</h1>
 
 <form>
@@ -13,9 +13,8 @@
 
 <ul>
     <?php foreach($posts as $post){ ?>
-        <li> <?= $post["content"] ?> </li>
+        <li><a href="show?id=<?= $post["id"] ?>"> <?= $post["content"] ?></a> </li>
     <?php } ?>
 </ul>
 
-</body>
-</html>
+<?php require "views/components/footer.php" ?>
