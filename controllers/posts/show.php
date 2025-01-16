@@ -1,4 +1,5 @@
 <?php
+$pageTitle = "Apskats";
 
 if(!isset($_GET["id"]) || $_GET["id"] == ""){
     redirectIfNotFound();
@@ -11,5 +12,6 @@ $post = $db->query($sql, $params)->fetch();
 if(!$post){
     redirectIfNotFound();
 }
+
 
 require "views/posts/show.view.php";

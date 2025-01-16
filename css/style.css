@@ -13,3 +13,6 @@ header ul li{
     list-style-type: "★";
     padding: 7px 10px;
 }
+.error{
+    color: red;
+}
