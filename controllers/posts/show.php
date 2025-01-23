@@ -1,5 +1,5 @@
 <?php
-$pageTitle = "Apskatīšana";
+$pageTitle = "Apskats";
 
 if(!isset($_GET["id"]) || $_GET["id"] == ""){
     redirectIfNotFound();
