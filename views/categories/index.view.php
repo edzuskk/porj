@@ -1,19 +1,16 @@
 <?php require "views/components/navbar.php" ?>
 <?php require "views/components/header.php" ?>
-<h1>Blogs</h1>
+<h1>Blogs - Kategorijas</h1>
 
-<form>
-    <input name='search_query' value='<?= $_GET["search_query"] ?? "" ?>'/>
-    <button>meklet</button>
-</form>
 
-<?php if (count($posts) == 0 ) { ?>
+
+<?php if (count($categories) == 0 ) { ?>
  <p>neka nav</p>
 <?php } ?>
 
 <ul>
-    <?php foreach($posts as $post){ ?>
-        <li><a href="show?id=<?= $post["id"] ?>"> <?= htmlspecialchars($post["content"]) ?></a> </li>
+    <?php foreach($categories as $categorys){ ?>
+        <li><a href="show?id=<?= $categorys["id"] ?>"> <?= htmlspecialchars($categorys["category_name"]) ?></a> </li>
     <?php } ?>
 </ul>
 

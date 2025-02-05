@@ -1,12 +1,12 @@
 <?php require "views/components/navbar.php" ?>
 <?php require "views/components/header.php" ?>
 
-<h1><?= htmlspecialchars($post["content"]) ?> </h1>
+<h1><?= htmlspecialchars($categories["category_name"]) ?> </h1>
 
-<a href="edit?id=<?= $post["id"] ?>">Rediget</a><br>
+<a href="edit?id=<?= $categories["id"] ?>">Rediget</a><br>
 
-<form action="/delete" method="POST">
-    <input type="hidden" name="id" value="<?= htmlspecialchars($post['id']) ?>">
+<form action="/categories/delete" method="POST">
+    <input type="hidden" name="id" value="<?= htmlspecialchars($categories['id']) ?>">
     <button type="submit">Dzēst</button>
 </form>
 

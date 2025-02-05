@@ -1,14 +1,14 @@
 <?php
-$sql = "SELECT * FROM posts";
+$sql = "SELECT * FROM categories";
 $params = [];
 //meklesana
 if(isset($_GET["search_query"]) && $_GET["search_query"] != ""){
     $search_query = "%" . $_GET["search_query"] . "%";
-    $sql .= " WHERE content LIKE :search_query";
+    $sql .= " WHERE category_name LIKE :search_query";
     $params = ["search_query" => $search_query];
 }
 
-$posts = $db->query($sql, $params)->fetchAll();
+$categories = $db->query($sql, $params)->fetchAll();
 $pageTitle = "blogs";
 
-require "views/posts/index.view.php";
+require "views/categories/index.view.php";

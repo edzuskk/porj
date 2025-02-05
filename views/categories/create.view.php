@@ -1,11 +1,11 @@
 <?php require "views/components/navbar.php" ?>
 <?php require "views/components/header.php" ?>
-<h1>Izveidosana</h1>
+<h1>Kategorijas izveidosana</h1>
 <form method = "POST">
-<label><input name="content" value="<?= $_POST['content'] ?? ""?>"  /></label>
+<label><input name="category_name" value="<?= $_POST['category_name'] ?? ""?>"  /></label>
 <button>izveidot</button>
 </form>
 
-<?php if(isset($errors["content"])) { ?>
-       <p class = "error"><?= $errors["content"] ?></p>
+<?php if(isset($errors["category_name"])) { ?>
+       <p class = "error"><?= $errors["category_name"] ?></p>
      <?php } ?>

@@ -5,13 +5,13 @@ if(!isset($_GET["id"]) || $_GET["id"] == ""){
     redirectIfNotFound();
 }
 
-$sql = "SELECT * FROM posts WHERE id = :id";
+$sql = "SELECT * FROM categories WHERE id = :id";
 $params = ["id" => $_GET["id"]];
-$post = $db->query($sql, $params)->fetch();
+$categories = $db->query($sql, $params)->fetch();
 
-if(!$post){
+if(!$categories){
     redirectIfNotFound();
 }
 
 
-require "views/posts/show.view.php";
+require "views/categories/show.view.php";
