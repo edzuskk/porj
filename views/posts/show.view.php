@@ -2,6 +2,7 @@
 <?php require "views/components/header.php" ?>
 
 <h1><?= htmlspecialchars($post["content"]) ?> </h1>
+<p>Kategorija: <?= $post["category_name"] ?> </p>
 
 <a href="edit?id=<?= $post["id"] ?>">Rediget</a><br>
 
