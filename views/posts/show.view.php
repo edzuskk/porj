@@ -11,11 +11,16 @@
     <button type="submit">Dzēst</button>
 </form>
 
-<form actiom = "/comments/create" method = "POST">
+<form action="/comments/create" method = "POST">
+        <input type="hidden" name="id" value=<?=$post["id"]?>></input>
         Aotars: <input name="krists"><br>
-        Pievienot komentaru: <input name="comment"> <br>
+        Komentars: <input name="comment"> <br>
         <button type= "submit" > Iesniegt </button>
 </form>
+
+<?php if(isset($errors["comment"])) { ?>
+       <p class = "error"><?= $errors["comment"] ?></p>
+     <?php } ?>
 
 
 <?php require "views/components/footer.php" ?>
